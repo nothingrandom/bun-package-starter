@@ -1,0 +1,14 @@
+# see https://bun.sh/docs/runtime/bunfig
+
+name = "bun-package-starter"
+type = "module"
+
+[env]
+NODE_VERSION = "18"
+BUN_VERSION = "1.2.x"
+
+[test]
+root = "./tests"
+coverage = true
+coverageThreshold = 0.95
+coverageReporter = ["text", "lcov"]
