@@ -3,13 +3,16 @@ import meow from 'meow';
 import { sum } from './index';
 import '../src/cli';
 
-const cli = meow(`
+const cli = meow(
+  `
   Usage
     $ bun-package-starter <input>
-`, {
-  importMeta: import.meta,
-  inferType: true,
-});
+`,
+  {
+    importMeta: import.meta,
+    inferType: true,
+  },
+);
 
 const input = cli.input as unknown as number[];
 if (input.length !== 2) {
